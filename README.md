@@ -27,32 +27,6 @@ python demo/run_demo.py
 - **xai/logs/** — Logs generated during experiments  
 - **demo/** — A lightweight example showing module integration  
 
-icare-xai-module/
- ├── README.md
- ├── LICENSE
- ├── requirements.txt
- ├── project_structure.md
- ├── screenshots/
- │   └── folder_tree.png
- ├── xai/
- │   ├── __init__.py
- │   ├── urls.py
- │   ├── tests.py
- │   ├── api/
- │   │   ├── __init__.py
- │   │   ├── serializers.py
- │   │   └── views.py
- │   ├── services/
- │   │   ├── safety.py
- │   │   ├── retrieval.py
- │   │   ├── generator.py
- │   │   └── explainability.py
- │   ├── data/
- │   └── logs/
- └── demo/
-     └── mock_chatbot_api.py
-
-# Project Structure Details
 
 ## Django App Creation
 To create the XAI module inside your chatbot project:
