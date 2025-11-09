@@ -18,3 +18,54 @@ python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python demo/run_demo.py
+
+```
+### 📁 Folder Overview
+- **xai/api/** — REST API endpoints for chatbot and explanations  
+- **xai/services/** — Core logic (safety, retrieval, generation, explainability)  
+- **xai/data/** — Stores configurations or small datasets (no sensitive data)  
+- **xai/logs/** — Logs generated during experiments  
+- **demo/** — A lightweight example showing module integration  
+
+icare-xai-module/
+ ├── README.md
+ ├── LICENSE
+ ├── requirements.txt
+ ├── project_structure.md
+ ├── screenshots/
+ │   └── folder_tree.png
+ ├── xai/
+ │   ├── __init__.py
+ │   ├── urls.py
+ │   ├── tests.py
+ │   ├── api/
+ │   │   ├── __init__.py
+ │   │   ├── serializers.py
+ │   │   └── views.py
+ │   ├── services/
+ │   │   ├── safety.py
+ │   │   ├── retrieval.py
+ │   │   ├── generator.py
+ │   │   └── explainability.py
+ │   ├── data/
+ │   └── logs/
+ └── demo/
+     └── mock_chatbot_api.py
+
+# Project Structure Details
+
+## Django App Creation
+To create the XAI module inside your chatbot project:
+```bash
+python manage.py startapp xai
+mkdir -p xai/api xai/services xai/data xai/logs
+touch xai/api/__init__.py xai/api/serializers.py xai/api/views.py
+touch xai/services/__init__.py xai/services/safety.py xai/services/retrieval.py xai/services/generator.py xai/services/explainability.py
+touch xai/urls.py xai/tests.py
+```
+# xai/services/explainability.py
+"""
+Explainability module:
+Builds user-facing explanations ('Why this?') for chatbot responses.
+Integrates with SHAP/attention outputs where applicable.
+"""
