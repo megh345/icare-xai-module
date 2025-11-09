@@ -3,6 +3,20 @@ Explainable AI for iCare
 
 Explainability layer for a mental health support chatbot. This repo contains only the XAI components I wrote. The core chatbot remains private and is not included here.
 
+# iCare Explainability Module (XAI)
+This repository contains the explainability layer developed for the iCare mental health chatbot.
+
+The module provides:
+- “Why this?” explanations for chatbot replies
+- Template-based, emotionally safe responses
+- Integration-ready endpoints for SHAP and attention-based explainability
+
+Structure
+- `api/` – Django API views for explanations
+- `services/` – Explainability logic, retrieval, safety
+- `data/` – Supporting files or configs
+- `logs/` – Local logging outputs for debugging
+
 ## What this module does
 - Builds short, human friendly “Why this?” explanations for a given chatbot reply
 - Uses policy templates to keep language safe and predictable
